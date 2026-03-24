@@ -50,6 +50,7 @@ function Navbar() {
 
   const handleLogout = async () => {
     await logout();
+    window.location.reload()
   }
 
   const handleShow = () => {
