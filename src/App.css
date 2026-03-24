@@ -1,0 +1,96 @@
+/* Initial state: invisible and shifted down */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+
+@keyframes courseCards {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.card-effect {
+    animation: courseCards linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes courseCardHover {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.2;
+    }
+}
+
+.card-effect:hover {
+    animation: courseCardHover linear;
+    animation-timeline: view();
+}
+
+@keyframes courseCardEffect2 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes courseCardEffect2Hover {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.2;
+    }
+}
+
+.card-effect-2 {
+    animation: courseCardEffect2 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.card-effect-2:hover {
+    animation: courseCardEffect2Hover linear;
+    animation-timeline: view();
+}
+
+@media screen and (max-width : 992px) {
+    .account-btns {
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
+}
+
+@media screen and (max-width : 1198px) {
+    .account-btns {
+        margin-left: 0px !important;
+    }
+}
+
+.is-invalid {
+    border-color: red;
+}
+
+.nav-img {
+    cursor: pointer;
+    width: 120px;
+}
+
+.resend-btn {
+    width: 130px;
+}
