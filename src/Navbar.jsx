@@ -5,6 +5,7 @@ import { UseCart } from "./store/cartReducer";
 import {AnimatePresence, spring} from "framer-motion";
 import { useState } from "react";
 import { useAuth } from "./backend/AuthContext";
+import { motion } from "framer-motion";
 
 function Navbar() {
 
