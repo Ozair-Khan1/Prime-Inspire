@@ -31,11 +31,11 @@ function Signup() {
   const [canResend, setCanResend] = useState(false);
 
   const [formData, setFormData] = useState({
-    name: "",
+    fullname: "",
     email: "",
   });
   const [error, setErrors] = useState({
-    name: false,
+    fullname: false,
     email: false,
   });
 
@@ -59,7 +59,7 @@ function Signup() {
     e.preventDefault();
 
     const newErrors = {
-      name: formData.name.trim() === "",
+      fullname: formData.fullname.trim() === "",
       email: formData.email.trim() === "",
     };
 
@@ -187,15 +187,15 @@ function Signup() {
                       type="text"
                       id="floatingInput"
                       placeholder="Name"
-                      name="name"
-                      value={formData.name}
+                      name="fullname"
+                      value={formData.fullname}
                       onChange={handleInput}
                       className={`form-control border-3 ${
-                        error.name ? "is-invalid" : ""
+                        error.fullname ? "is-invalid" : ""
                       }`}
                     />
                     <label htmlFor="floatingInput p-0">Name</label>
-                    {error.name && (
+                    {error.fullname && (
                       <p className="invalid-feedback">Please Enter Your Name</p>
                     )}
                     {usernameExist && (
