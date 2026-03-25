@@ -151,7 +151,18 @@ function Login() {
                                             )}
                                         </div>
                                         <button type="submit" className="btn btn-primary mt-4 w-100 fw-semibold" disabled={isSubmitting}>
-                                            {isSubmitting ? "Logging in..." : "Log in"}
+                                            {isSubmitting ? (
+                                                <div className="d-flex align-items-center justify-content-center gap-2">
+                                                    Logging in
+                                                    <div class="spinner-border spinner-border-sm text-white" role="status">
+                                                        <span class="visually-hidden">Loading...</span>
+                                                    </div>
+                                                </div>
+                                            ) : (
+                                                <div className="d-flex align-items-center justify-content-center gap-2">
+                                                    Login
+                                                </div>
+                                            )}
                                         </button>
                                         <div className="d-flex align-items-center justify-content-center mt-3">
                                             <hr className="w-25"/>
