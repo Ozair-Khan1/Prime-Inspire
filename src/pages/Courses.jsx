@@ -62,7 +62,7 @@ function Courses() {
   setLoading(true);
 
   try {
-    const TEMP_KEY = import.meta.env.VITE_TEMP_KEY 
+    const TEMP_KEY = import.meta.env.VITE_YT_KEY 
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${filter}+course&type=playlist&maxResults=6&key=${TEMP_KEY}`;
     const res = await fetch(url);
     const data = await res.json();
